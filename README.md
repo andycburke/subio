@@ -4,6 +4,217 @@
   <a href="https://react-saas.com"><img height="300" src="public/assets/images/nextjs-starter-banner.png?raw=true" alt="Next.js SaaS Template"></a>
 </p>
 
+## README
+
+1. What substations.io is (at its core)
+
+substations.io is a simple, engineer-focused web application that captures structured design decisions for substations and related infrastructure.
+
+At its heart, it is not a simulation engine, CAD replacement, or power system solver.
+
+It is:
+
+A persistent, structured record of engineering answers that define a substation design.
+
+2. Core user workflow (end-to-end)
+Step 1 — User accounts
+
+Engineers, utilities, EPCs, data-center teams, etc.
+
+Email/password or SSO
+
+No social/media complexity
+
+Professional, utilitarian UX
+
+Step 2 — Projects
+
+A user can create multiple projects
+
+Each project represents one substation / facility / design effort
+
+Projects are:
+
+Saved
+
+Editable
+
+Reopenable
+
+Shareable later (future)
+
+Step 3 — Guided configuration (the main value)
+
+Each project consists of a series of structured questions, such as:
+
+Voltage levels
+
+Utility vs industrial
+
+Indoor vs outdoor
+
+Panel/enclosure choices
+
+Protection & control architecture
+
+SCADA/communications
+
+Station service
+
+Environmental constraints
+
+Jurisdiction / standards
+
+Technically:
+
+Mostly dropdowns
+
+Some numeric inputs
+
+Some free-text fields
+
+Each answer is just data, not logic-heavy computation
+
+A project is simply a JSON-like record of answers.
+
+3. What the system does with those answers (now and later)
+Phase 1 (MVP – current goal)
+
+Persist answers
+
+Reload answers
+
+Allow iteration
+
+Clean, professional UI
+
+No heavy calculations
+
+No CAD
+
+No code compliance engine
+
+Phase 2 (near-term extensions)
+
+Contextual help per field
+(“Why is this needed?”)
+
+Conditional questions
+(answers enable/disable other fields)
+
+Structured exports:
+
+Engineering summary
+
+Basis of design
+
+Scope definition
+
+Simple validation
+(e.g., “25 kV selected → warn if 600 V gear chosen”)
+
+Phase 3 (future / optional)
+
+BOM generation
+
+Panel configurators
+
+3D visualization
+
+Multi-user collaboration
+
+Templates by utility or EPC
+
+“Engineer-to-engineer handoff” artifacts
+
+4. What makes it valuable (your differentiator)
+
+substations.io is valuable because it:
+
+Replaces tribal knowledge
+
+Prevents missed scope
+
+Creates consistency across projects
+
+Speeds up:
+
+Proposals
+
+Early design
+
+Client alignment
+
+Is engineer-authored, not generic SaaS
+
+It sits between:
+
+A Word document
+
+An Excel checklist
+
+A full EPC design package
+
+5. What it is not trying to be
+
+This is important, because you’ve been very clear about this:
+
+❌ Not a power system analysis tool
+❌ Not ETAP / SKM / CYME
+❌ Not AutoCAD / Revit
+❌ Not a utility asset database
+❌ Not a “low-code platform”
+
+You explicitly want to avoid over-engineering.
+
+6. Mental model (this is key)
+
+Think of substations.io as:
+
+“Notion + Typeform + engineering logic — but purpose-built for substations.”
+
+Or:
+
+“A database-backed engineering checklist that actually understands substations.”
+
+7. Why your instinct is correct
+
+You are right that:
+
+This problem is conceptually simple
+
+Most platforms already solve:
+
+Auth
+
+Projects
+
+Forms
+
+Persistence
+
+Your real work is:
+
+The questions
+
+The structure
+
+The defaults
+
+The professional UX
+
+That’s why:
+
+You want to reuse as much plumbing as possible
+
+You want to focus on UI and engineering logic
+
+You want something you can evolve slowly without technical debt
+
+8. One-sentence elevator pitch
+
+substations.io is a web-based tool that lets engineers create, save, and iterate substation designs by capturing structured engineering decisions in a clean, professional, and reusable format.
+
 🚀 **SaaS Boilerplate** is a powerful and fully customizable template to kickstart your SaaS applications. Built with **Next.js** and **Tailwind CSS**, and the modular UI components of **Shadcn UI**. This **Next.js SaaS Template** helps you to quickly build and launch SaaS with minimal effort.
 
 Packed with essential features like built-in **Authentication**, **Multi-Tenancy** with Team support, **Role & Permission**, Database, I18n (internationalization), Landing Page, User Dashboard, Form handling, SEO optimization, Logging, Error reporting with [Sentry](https://sentry.io/for/nextjs/?utm_source=github&utm_medium=paid-community&utm_campaign=general-fy25q1-nextjs&utm_content=github-banner-nextjsboilerplate-logo), Testing, Deployment, Monitoring, and **User Impersonation**, this SaaS template provides everything you need to get started.
