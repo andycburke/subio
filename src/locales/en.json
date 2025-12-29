@@ -14,7 +14,7 @@
   },
   "Hero": {
     "follow_twitter": "Follow @Ixartz on Twitter",
-    "title": "The perfect <important>SaaS template</important> to build and scale your business with ease.",
+    "title": "Instant <important>Substation Configurator</important> to quote and build your next substation",
     "description": "A free and open-source landing page template for your SaaS business, built with React, TypeScript, Shadcn UI, and Tailwind CSS.",
     "primary_button": "Get Started",
     "secondary_button": "Star on GitHub"
@@ -94,7 +94,7 @@
     "settings": "Settings"
   },
   "Dashboard": {
-    "meta_title": "SaaS Template Dashboard",
+    "meta_title": "Substations.io Dashboard",
     "meta_description": "A free and open-source landing page template for your SaaS business, built with Next.js, TypeScript, Shadcn UI, and Tailwind CSS."
   },
   "DashboardIndex": {
