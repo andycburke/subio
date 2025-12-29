@@ -1,6 +1,7 @@
 import {
   bigint,
   index,
+  jsonb,
   pgTable,
   text,
   timestamp,
@@ -118,6 +119,37 @@ export const revisionSchema = pgTable(
     versionUnique: uniqueIndex('revision_project_version_uq').on(
       table.projectId,
       table.versionLabel,
+    ),
+  }),
+);
+
+export const projectConfigSchema = pgTable(
+  'project_config',
+  {
+    id: uuid('id').primaryKey().defaultRandom(),
+
+    projectId: uuid('project_id')
+      .notNull()
+      .references(() => projectSchema.id, { onDelete: 'cascade' }),
+
+    revisionId: uuid('revision_id')
+      .references(() => revisionSchema.id, { onDelete: 'set null' }),
+
+    createdBy: text('created_by').notNull(),
+
+    data: jsonb('data').notNull(),
+
+    updatedAt: timestamp('updated_at', { mode: 'date' })
+      .defaultNow()
+      .$onUpdate(() => new Date())
+      .notNull(),
+    createdAt: timestamp('created_at', { mode: 'date' }).defaultNow().notNull(),
+  },
+  table => ({
+    projectIdx: index('project_config_project_idx').on(table.projectId),
+    projectRevisionUq: uniqueIndex('project_config_project_revision_uq').on(
+      table.projectId,
+      table.revisionId,
     ),
   }),
 );
